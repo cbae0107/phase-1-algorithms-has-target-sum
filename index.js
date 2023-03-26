@@ -1,14 +1,19 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  const num1 = {};
+  
+ for (const number of array){
+  const num2 = target - number;
+  if (num2 in num1) 
+    return true;
+    num1[number] = true
+
+ }
+ return false
 }
 
-/* 
-  Write the Big O time complexity of your function here
-*/
-
-/* 
-  Add your pseudocode here
-*/
+  // 1. Function receives two arguments, an Array and a Target
+  // 2. If any pair in the Array equals to the Target, return true
+  // 3. Else return false
 
 /*
   Add written explanation of your solution here
